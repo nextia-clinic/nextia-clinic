@@ -139,7 +139,29 @@ I'd be fine staying a **plain monolith** (skip the modules) if:
 
 ---
 
-*All seven questions above were asked and answered one at a time with the owner on 2026-11-22. Decision 7 (data location) remains open pending the platform choice.*
+## 9. Which hosting platform
+
+**Decision:** **Cloudflare**, using an **external AI model API** (e.g. Anthropic Claude) for the AI receptionist rather than Cloudflare's own AI models. Products: Workers (run the app), D1 (database), R2 (files), Cron Triggers (reminders), Email Routing (inbound email), with patient sign-in built on our own or a third-party service.
+
+**Why:**
+
+- **Lowest cost at our scale** — roughly $5–10/month to start and only tens of dollars at heavy use, versus a fixed ~$90/month floor elsewhere.
+- **Simplest to build and run** — one toolchain (Workers/D1/R2) that we can drive end-to-end from the command line, with fast deploys.
+- **Inbound email fits our flows** — Email Routing hands a message straight to our code, which is exactly what the Interac-match and AI-receptionist intake need.
+- **Portable data layers** — R2 is S3-compatible and D1 is standard SQLite, so leaving later is a matter of weeks, not months.
+- **External AI API** keeps answer quality and safety high for a patient-facing receptionist and avoids being tied to any one platform's models.
+
+**What would change our mind:**
+
+- **Canadian data residency (Decision 7).** If a privacy professional confirms health data must physically stay in Canada, Cloudflare cannot guarantee that today (D1/R2 offer no Canadian region, only best-effort North-America hints). We would then move the data layer — or the whole app — to a Canadian-region provider such as Azure (Canada Central/East). *This is the main open risk of this choice.*
+- Needing a **managed patient sign-in product** (Cloudflare has none — we build or buy one).
+- Growth **far beyond a few thousand users**, or opening the app to other clinics (SaaS, Decision 3).
+
+**Pricing pages (read November 2026):** [Workers](https://developers.cloudflare.com/workers/platform/pricing/) · [D1](https://developers.cloudflare.com/d1/platform/pricing/) · [R2](https://developers.cloudflare.com/r2/pricing/) · [Email Routing](https://developers.cloudflare.com/email-routing/) · [Email Service (outbound, beta)](https://developers.cloudflare.com/email-service/platform/pricing/) · [Workers AI](https://developers.cloudflare.com/workers-ai/platform/pricing/). Full platform comparison and cost estimates: `outputs/06-platform/comparison.md`.
+
+---
+
+*All seven questions above were asked and answered one at a time with the owner on 2026-11-22. Decision 9 (platform) was added the same day; Decision 7 (data location) remains open and is the main risk carried by the Cloudflare choice.*
 
 ---
 
