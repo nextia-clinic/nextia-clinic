@@ -22,7 +22,9 @@ the plan, then the decisions. The rules you must follow on every change live in
 - [`setup-guide.md`](setup-guide.md) — what a new person needs before they can
   work on the project.
 - `manual-steps/` — step-by-step instructions for anything the owner must do by
-  hand (created per task as needed).
+  hand (created per task as needed):
+  - [`manual-steps/two-factor.md`](manual-steps/two-factor.md) — turn on
+    two-factor sign-in for your GitHub account.
 
 ## Checklists
 
