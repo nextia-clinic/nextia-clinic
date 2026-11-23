@@ -23,6 +23,13 @@ the plan, then the decisions. The rules you must follow on every change live in
   work on the project.
 - `manual-steps/` — step-by-step instructions for anything the owner must do by
   hand (created per task as needed):
+  - [`manual-steps/accounts.md`](manual-steps/accounts.md) — every account the
+    app uses, who has access, two-factor status, which KeePass entry holds each
+    secret, how to turn on two-factor where missing, and a leaver checklist.
+  - [`manual-steps/cloudflare-token.md`](manual-steps/cloudflare-token.md) —
+    create a Cloudflare API token scoped to Workers, D1, and R2 with an expiry
+    date, load it from KeePass into your terminal without it showing on screen,
+    verify it, and recover if it leaks.
   - [`manual-steps/two-factor.md`](manual-steps/two-factor.md) — turn on
     two-factor sign-in for your GitHub account.
 
