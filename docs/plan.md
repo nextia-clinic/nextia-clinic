@@ -32,6 +32,9 @@ The app keeps names, contact details, appointments, payments, and health informa
 - Every payment change is logged with **who did it and when**. Every refund also records the **reason**.
 - Staff (location manager and front desk) act within **their own location** only.
 - Practitioners see only **their own** calendar and their own patients' notes.
+- **Interac e-Transfer** is sent by the patient to **payments@nextiaclinic.com** with their **booking code** (e.g. `NC-4821`) in the message. The app matches the transfer to the booking by that code. If there is no clear match, the **front desk** checks it — a payment is **never** marked as paid on a guess.
+- **Cash** is taken at the **front desk** with a **receipt**, and **each location counts its cash every day**.
+- A **reminder email** goes out the **day before the appointment**, in the **patient's language**.
 
 ## What must never go wrong
 
