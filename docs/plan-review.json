@@ -1,0 +1,223 @@
+{
+  "document": "docs/plan.md",
+  "savedAt": "2026-11-23T02:58:11.120Z",
+  "items": [
+    {
+      "id": "41fd60dda4",
+      "section": "The problem",
+      "text": "Patients cannot book or move an appointment outside opening hours, and the front desk spends hours on the phone.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "de27feabd0",
+      "section": "Who pays, and why",
+      "text": "Patients pay a **$50 deposit by card at booking** for any service of **$150 or more**. The rest is paid after the visit by card, Interac e-Transfer, or cash. (Who pays to run the app, and how the deposit is handled, are open questions below.)",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "2bec1e0d01",
+      "section": "The users, and what each may do",
+      "text": "**Owner (me)** — everything, including approving refunds.",
+      "approved": true,
+      "comment": "Also log the reason for every refund."
+    },
+    {
+      "id": "aa3e485738",
+      "section": "The users, and what each may do",
+      "text": "**Location manager** (one per location) — staff, hours, and reports for their own location.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "8de9d79a06",
+      "section": "The users, and what each may do",
+      "text": "**Front desk** — bookings, payments, and cash for their own location.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "26225d7931",
+      "section": "The users, and what each may do",
+      "text": "**Practitioner** — their own calendar and their own patients' notes.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "16f1d4fb02",
+      "section": "The users, and what each may do",
+      "text": "**Patient** — their own bookings and payments.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "34e707bb1e",
+      "section": "The users, and what each may do",
+      "text": "**AI receptionist** — reads `hello@nextiaclinic.com` and the website chat; answers from clinic policies; books and moves appointments. It never gives medical advice, never sees medical notes, only *proposes* refunds, and hands off to the front desk when it is not sure.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "864ac465fd",
+      "section": "The data",
+      "text": "The app keeps names, contact details, appointments, payments, and health information. **Health information is the most sensitive.**",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "2922e8a8dc",
+      "section": "The business rules",
+      "text": "A $50 card deposit is taken at booking for any service of $150 or more.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "83927700b6",
+      "section": "The business rules",
+      "text": "The remainder is paid after the visit by card, Interac e-Transfer, or cash.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "bc51c0d8f2",
+      "section": "The business rules",
+      "text": "Cancelling is free up to **24 hours before** the appointment. Cancelling later than that (including a no-show) means the **deposit is kept**.",
+      "approved": true,
+      "comment": "24 hours before the appointment, not one day before the date"
+    },
+    {
+      "id": "70414aae76",
+      "section": "The business rules",
+      "text": "Only the **owner** can approve a refund. The AI receptionist can only *propose* one.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "7908c82f8c",
+      "section": "The business rules",
+      "text": "Every payment change is logged with **who did it and when**.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "6b6bd3b837",
+      "section": "The business rules",
+      "text": "Staff (location manager and front desk) act within **their own location** only.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "3c069303cb",
+      "section": "The business rules",
+      "text": "Practitioners see only **their own** calendar and their own patients' notes.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "dc869a289c",
+      "section": "What must never go wrong",
+      "text": "A double booking.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "c43bd1f0a5",
+      "section": "What must never go wrong",
+      "text": "A patient seeing another patient's record.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "3348789563",
+      "section": "What must never go wrong",
+      "text": "A refund to the wrong person.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "0b9b43e27c",
+      "section": "Not in version one",
+      "text": "A phone app in the app stores.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "f6898a01f2",
+      "section": "Not in version one",
+      "text": "Billing to insurance companies.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "bfe4cc3120",
+      "section": "Not in version one",
+      "text": "Video visits.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "bb2433f7e8",
+      "section": "Not in version one",
+      "text": "Other clinics using the app.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "105bb7523c",
+      "section": "How we will know it works",
+      "text": "Fewer phone calls to the front desk.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "2460afd6a0",
+      "section": "How we will know it works",
+      "text": "Fewer missed appointments.",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "e304cd9976",
+      "section": "Open questions",
+      "text": "**Deposit applied to the bill** — When the patient attends, is the $50 deposit applied to the final bill, or kept separately? *(The cancel/no-show rule is now decided: free up to 24 hours before, deposit kept after that.)*",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "ba10db004b",
+      "section": "Open questions",
+      "text": "**Who pays to run the app** — Who covers hosting, email, payments, and AI model costs?",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "d0ca427621",
+      "section": "Open questions",
+      "text": "**Full data model and sensitivity** — Confirmed so far: names, contact details, appointments, payments, health information. Any other data to store, and how each is classified?",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "f64855ba19",
+      "section": "Open questions",
+      "text": "**Children / minors** — Does the clinic treat minors, and must the app handle guardian/parental consent and access?",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "c61ab94579",
+      "section": "Open questions",
+      "text": "**Which laws apply** — Not yet decided. Candidates to confirm with a professional (see `checklists/rules-that-apply.md`): federal PIPEDA, Quebec Law 25, Ontario PHIPA, and French-language rules (OQLF). *The English/French requirement itself is decided and firm.*",
+      "approved": true,
+      "comment": ""
+    },
+    {
+      "id": "cd8f0c4bcc",
+      "section": "Open questions",
+      "text": "**Monthly budget** — Total monthly budget for the agent, hosting, email, payments, and AI model, so a budget alert can be set on every paid service.",
+      "approved": true,
+      "comment": ""
+    }
+  ]
+}
