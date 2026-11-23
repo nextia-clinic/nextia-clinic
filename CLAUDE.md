@@ -77,6 +77,8 @@ patient seeing another's record, and a refund to the wrong person
 - Cover the rules that matter: role-and-location scope, the no-double-booking
   slot check, the privacy filter keeping medical notes from the AI, and both
   languages.
+- **Use only our fake patients in tests and examples** — Maria Lopez, Jean Roy,
+  Priya Shah, and Daniel Kim. Never use a real person's details.
 
 ## 6. Branches & pull requests
 
@@ -88,6 +90,9 @@ All work flows through branches and review. Releases are never done by hand
   opened (§5).
 - **Never deploy by hand.** Deploys happen through the pipeline, not from a
   laptop.
+- **Ask the owner before adding any new paid service or outside/third-party
+  service.** Cost and who receives our data are the owner's call
+  (`docs/plan.md`, open questions 2 and 6) — never add one on your own.
 - Keep each PR focused and reviewable.
 
 ## 7. Docs stay current
